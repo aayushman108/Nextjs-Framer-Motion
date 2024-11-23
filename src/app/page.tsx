@@ -2,7 +2,7 @@
 
 import { useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
-import { useRef } from "react";
+import { useMemo, useRef } from "react";
 import { motion } from "framer-motion";
 
 const IMAGES = [
@@ -11,18 +11,23 @@ const IMAGES = [
   { id: 3, image: "/images/media_3.jpg" },
   { id: 4, image: "/images/media_4.png" },
   { id: 5, image: "/images/media_5.png" },
-  { id: 6, image: "/images/media_6.jpg" },
   { id: 7, image: "/images/media_7.png" },
   { id: 8, image: "/images/media_8.png" },
-  { id: 9, image: "/images/media_9.jpg" },
-  { id: 10, image: "/images/media_10.png" },
 ];
 
 export default function Home() {
   const sectionRef = useRef(null);
   const { scrollYProgress } = useScroll({ target: sectionRef });
 
-  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-71.43%"]);
+  const percentageHorizontalScroll = useMemo(() => {
+    return (100 * 100) / (35 * IMAGES?.length) - 100;
+  }, []);
+
+  const x = useTransform(
+    scrollYProgress,
+    [0, 1],
+    ["0%", `${percentageHorizontalScroll}%`]
+  );
   return (
     <main>
       <header>Header</header>
