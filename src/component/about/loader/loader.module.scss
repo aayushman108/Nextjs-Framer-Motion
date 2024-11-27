@@ -1,0 +1,41 @@
+.loader {
+  width: 100%;
+  height: calc(100vh - 5rem);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &__item {
+    position: absolute;
+    transform-origin: center;
+    object-fit: cover;
+    &.image-1 {
+      width: 600px;
+      aspect-ratio: 16/9;
+    }
+    &.image-2 {
+      width: 300px;
+      aspect-ratio: 16/9;
+      left: 5%;
+      top: 5%;
+    }
+    &.image-3 {
+      width: 300px;
+      aspect-ratio: 12/9;
+      right: 5%;
+      top: 5%;
+    }
+    &.image-4 {
+      width: 350px;
+      aspect-ratio: 18/9;
+      bottom: 5%;
+      left: 5%;
+    }
+    &.image-5 {
+      width: 300px;
+      aspect-ratio: 9/12;
+      bottom: 5%;
+      right: 5%;
+    }
+  }
+}
