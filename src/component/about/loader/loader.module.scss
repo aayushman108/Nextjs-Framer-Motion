@@ -1,7 +1,7 @@
 .loader {
   width: 100%;
   height: calc(100vh - 5rem);
-  position: relative;
+  position: absolute;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -9,10 +9,6 @@
     position: absolute;
     transform-origin: center;
     object-fit: cover;
-    &.image-1 {
-      width: 600px;
-      aspect-ratio: 16/9;
-    }
     &.image-2 {
       width: 300px;
       aspect-ratio: 16/9;
@@ -37,5 +33,10 @@
       bottom: 5%;
       right: 5%;
     }
+  }
+  .transition_img {
+    position: absolute;
+    width: 500px;
+    aspect-ratio: 16/9;
   }
 }
