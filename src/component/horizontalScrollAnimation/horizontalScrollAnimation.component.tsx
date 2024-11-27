@@ -9,7 +9,7 @@ import styles from "./horizontalScrollAnimation.module.scss";
 
 export function HorizontalScrollAnimation() {
   const sectionRef = useRef(null);
-  const { scrollYProgress } = useScroll({ target: sectionRef });
+  const { scrollYProgress } = useScroll({ target: sectionRef }); //Normalize to a range between 0 and 1. 0: The top of the target element is at top of the view port, and 1: The bottom of the target element is at bottom of the viewport
 
   const percentageHorizontalScroll = useMemo(() => {
     return (100 * 100) / (35 * IMAGES?.length) - 100;

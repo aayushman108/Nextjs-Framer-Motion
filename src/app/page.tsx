@@ -1,4 +1,4 @@
-import { HorizontalScrollAnimation } from "./component/horizontalScrollAnimation/horizontalScrollAnimation.component";
+import { HorizontalScrollAnimation } from "@/component";
 
 export default function Home() {
   return (
