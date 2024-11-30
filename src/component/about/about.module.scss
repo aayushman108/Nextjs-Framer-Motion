@@ -3,10 +3,10 @@
   min-height: 100vh;
   .about {
     width: 100%;
-    &__hello {
-      padding: 10rem 2rem 25rem;
+    &__text {
+      padding: 10rem 2rem;
     }
-    .transition_img {
+    .about__img {
       position: relative;
       width: 90%;
       aspect-ratio: 16/9;

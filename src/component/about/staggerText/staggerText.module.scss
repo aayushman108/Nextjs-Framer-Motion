@@ -1,0 +1,8 @@
+.stagger_text {
+  font-size: 100px;
+  font-weight: 600;
+  & > span {
+    display: inline-block;
+    width: fit-content;
+  }
+}
