@@ -57,7 +57,7 @@ const mainImageVariants = {
     },
   },
   exit: {
-    transition: { ease: easeInOut, duration: 2 },
+    transition: { ease: [0.42, 0, 0.58, 1], duration: 0.8 },
   },
 };
 

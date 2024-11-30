@@ -9,6 +9,8 @@
     position: absolute;
     transform-origin: center;
     object-fit: cover;
+    border-radius: 4px;
+    overflow: hidden;
     &.image-2 {
       width: 300px;
       aspect-ratio: 16/9;
@@ -38,5 +40,7 @@
     position: absolute;
     width: 500px;
     aspect-ratio: 16/9;
+    border-radius: 6px;
+    overflow: hidden;
   }
 }
